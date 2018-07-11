@@ -1,5 +1,5 @@
 <?php
-
+	// TODO: zrób do tego funkcję, tak samo jak do weryfikowania czy aktualna strona == active
 	$activePage = basename($_SERVER['PHP_SELF'], ".php");
  ?>
 
