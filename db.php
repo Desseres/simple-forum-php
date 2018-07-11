@@ -1,6 +1,8 @@
 <?php
+// TODO: ???? session_start(); ???
 session_start();
 
+// TODO: przenieść config do pliku zewnętrznego który nie musi być w repo
 $DB_host = "";
 $DB_user = "";
 $DB_pass = "";
@@ -16,7 +18,7 @@ catch(PDOException $e)
      echo $e->getMessage();
 }
 
-
+// TODO: Tutaj powinien być zastosowany autoload
 include_once 'class.user.php';
 $user = new USER($DB_con);
 
