@@ -163,6 +163,7 @@ class POST {
 			$stmt = $this->db->prepare("INSERT INTO posts (post_content, post_topic, post_by)
 										VALUES (:post_content, :post_topic, :post_by)");
 			$stmt->bindparam(":post_content", $post_content);
+			// TODO: Łykasz content jak pelikan, XSS itp.
 			$stmt->bindparam(":post_topic", $topic_id);
 			$stmt->bindparam(":post_by", $user_id);
 
@@ -218,6 +219,7 @@ class POST {
 			$stmt->bindparam(":user_id", $user_id);
 			$stmt->bindparam(":post_id", $post_id);
 			$stmt->bindparam(":post_content", $post_content);
+			// TODO: Łykasz content jak pelikan, XSS itp.
 			$stmt->execute();
 			$count = $stmt->rowCount();
 			if($count > 0)
@@ -272,6 +274,7 @@ class POST {
 			$stmt->bindparam(":user_id", $user_id);
 			$stmt->bindparam(":comment_id", $comment_id);
 			$stmt->bindparam(":comment_content", $comment_content);
+			// TODO: Łykasz content jak pelikan, XSS itp.
 			$stmt->execute();
 			$count = $stmt->rowCount();
 			if($count > 0)
