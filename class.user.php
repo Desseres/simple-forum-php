@@ -17,6 +17,7 @@ class USER
 	{
 		try 
 		{
+			// TODO: Brak soli do hasła, można próbować rokodować słownikowo
 			$hashed_password = password_hash($user_pass, PASSWORD_DEFAULT);	
 
 			$stmt = $this->db->prepare("INSERT INTO users
@@ -99,6 +100,9 @@ class USER
 			$stmt->bindparam(":uid", $session_user_id);
 			$stmt->execute();
 			$user = $stmt->fetch(PDO::FETCH_ASSOC);
+			
+			// TODO: ponownie model połączony z kontrolerem i widokiem
+			
 			if($stmt->rowCount() > 0)
 			{
 			$user_id = $user['user_id'];
