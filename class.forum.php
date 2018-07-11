@@ -1,4 +1,9 @@
 <?php 
+/**
+* TODO: namespace dla klasy, wsadzenie tego do folderu class czy czegoś pokrewnego i zabranie z widoku dla user quest
+* TODO: wcięcia do poprawy wg. PSR-2
+* TODO: oddzielenie modelu od kontrolera i widoku, render HTML'a powinien odbywać się w widoku na podstawie pobranych przez kontroler danych z modelu. Zasada MVC
+*/
 class FORUM {
 
 	private $db;
@@ -9,7 +14,7 @@ class FORUM {
     }
 
 
-
+	// TODO: Uzupełnienie komentarzy nad funkcjami do czego służą. Prosta dokumentacja na przyszłość. 
 	public function theCategories()
 	{
 		try
@@ -37,6 +42,7 @@ class FORUM {
 			$html = '';
 			foreach($categoriesToTopics as $key => $category)
 			{
+				// TODO: Wynieść render HTML do widoku. Nie powinien się on znajdować w kontrolerze.
 				$html.= '<div class="category">';
 					$html.= '<h3 class="category-name">';
 					$html.= $key;
@@ -67,6 +73,7 @@ class FORUM {
 		}
 		catch(PDOException $e)
 		{
+			// TODO: Brak loggera i przetwarzania błędami. Sypiesz całym syfem na twarz użytkownika.
 			echo $e->getMessage();
 		}
 	}
