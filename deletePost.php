@@ -3,7 +3,7 @@
 include_once('db.php');
 
 $user_id = $_SESSION['user_session'];
-
+// TODO: to powinna być funkcja np. delete($id) w modelu Posts
 if(isset($_GET['id']))
 {
 	try
