@@ -1,3 +1,6 @@
+<!-- do generacji tego elementu zalecałbym zastosowanie twiga / blade itp. -->
+<!-- wydziel widoki do osobnego folderu np. view -->
+<!-- usuń zbędny kod który jest powielony w pliku js. -->
 
 <footer class="footer">
 <p>© 2018 <a href="index.php">MYDOMAIN.COM</a> ALL RIGHTS RESERVED</p>
